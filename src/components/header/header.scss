@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import "../../variables/variables.scss";
+
+.headerContainer {
+    padding-bottom: 40px;
+}
+
+.headerContainer .mockup {
+    padding-top: -100px;
+}
+
+.headerContainer img {
+    width: 100%;
+    background: url("../../images/bg-intro-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: -70px;
+    background-position-y: 30px;
+}
+
+.headerContainer h1 {
+    font-family: "Public Sans", sans-serif;
+    color: $DarkBlue;
+    width: 100%;
+    font-size: 22px;
+    max-width: 200px;
+}
+
+.headerContainer p {
+    font-family: "Public Sans", sans-serif;
+    color: $GrayishBlue;
+    width: 100%;
+    max-width: 400px;
+}
+
+.headerContainer .relative {
+    position: relative;
+    right: 280px;
+    top: -170px;
+}
+
+
+.headerContainer .absolute {
+    position: absolute;
+    top: 150px;
+    left: 200px;
+}
+
+.headerContainer .button {
+    background: var(--gradient-colors);
+    border-radius: 20px;
+    cursor: pointer;
+    border: none;
+    color: $White;
+    font-family: "Public Sans", sans-serif;
+    &:hover {
+        background: var(--gradient-colors-hover);
+    }
+}
+
+@media screen and (min-width: 576px) {
+    .headerContainer {
+        padding-top: 75px;
+        padding-bottom: 75px;
+    }
+
+    .headerContainer .mockup {
+        margin-top: -100px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .headerContainer {
+        padding-top: 140px;
+    }
+
+    .headerContainer .mockup {
+        padding-top: 130px;
+    }
+}
+
+@media screen and (min-width: 369px) {    
+    .headerContainer h1 {
+        font-size: 26px;
+        max-width: 250px;
+    }
+}
+
+@media screen and (min-width: 500px) {    
+    .headerContainer h1 {
+        font-size: 30px;
+        max-width: 250px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .headerContainer h1 {
+        font-size: 33px;
+        max-width: 250px;
+    }
+
+    .headerContainer img {
+        background-position-x: -100px;
+        background-position-y: -90px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .headerContainer h1 {
+        font-size: 35px;
+        max-width: 300px;
+    }
+
+    .headerContainer img {
+        background-position-x: -100px;
+        background-position-y: -50px;
+    }
+}
+
+@media screen and (min-width: 1300px) {
+    .headerContainer img {
+        background-position-x: -120px;
+        background-position-y: -100px;
+    }
+}
+
+
+

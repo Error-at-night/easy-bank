@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import "../../variables/variables.scss";
+
+.navBar {
+    background-color: $White;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+
+.navBar a {
+    font-family: "Public Sans", sans-serif;
+    color: $GrayishBlue;
+    position: relative;
+
+    &::after{
+        content: '';
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -24px;
+        width: 0;
+        height: 4px;
+        background: $LimeGreen;
+        transition: all .5s;
+    }
+
+    &:hover::after {
+        width: 100%;
+        color: $DarkBlue;
+    }
+}
+
+
+.navBar .button {
+    background: var(--gradient-colors);
+    border-radius: 20px;
+    cursor: pointer;
+    border: none;
+    color: $White;
+    font-family: "Public Sans", sans-serif;
+    &:hover {
+        background: var(--gradient-colors-hover);
+    }
+}
+
+.navBar .dropdownToggle {
+    background: none;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    display: none;
+}
+
+@media screen and (max-width: 991px) {
+    .navBar a {
+        color: $DarkBlue;
+
+        &:hover::after {
+            width: 0;
+        }
+    }
+
+    .navBar .linksWrapper {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        max-width: 400px;
+        width: 90%;
+        background-color: $White;
+        z-index: 999;
+        margin-top: 20px;
+        transition: all 0.3s ease;
+        text-align: center;
+        overflow: hidden;
+        border-radius: 5px;
+        box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.5), 1px 1px 1px 0 rgba(0, 0, 0, 0.3);
+      }
+    
+    .navBar .linksWrapper.active {
+        display: block;
+        max-height: 300px;
+        overflow-y: auto;
+        transition: all 0.3s ease;
+    }
+    
+    .navBar .linksWrapper .links {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .navBar .button {
+        display: none;
+    }
+    
+    .navBar .dropdownToggle {
+        display: block;
+        transition: all 0.3s ease;
+    }
+
+    .navBar .closeButton {
+        display: none;
+    }
+}
+  

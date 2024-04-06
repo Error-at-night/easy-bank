@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import "../../variables/variables.scss";
+
+.mainContainer {
+    padding-top: 40px;
+    padding-bottom: 30px;
+}
+
+.mainContainer .whyEasyBank h1 {
+    font-family: "Public Sans", sans-serif;
+    color: $DarkBlue;
+}
+
+.mainContainer .whyEasyBank p {
+    max-width: 600px;
+    width: 100%;
+    font-family: "Public Sans", sans-serif;
+    color: $GrayishBlue;
+}
+
+.mainContainer .column h5 {
+    color: $DarkBlue;
+    font-family: "Public Sans", sans-serif;
+}
+
+.mainContainer .column p {
+    color: $GrayishBlue;
+    font-family: "Public Sans", sans-serif;
+}
+
+@media screen and (min-width: 576px) {
+    .mainContainer {
+        padding-top: 110px;
+        padding-bottom: 110px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .mainContainer {
+        margin-top: -150px;
+    }
+}
+
+@media screen and (min-width: 1350px) {
+    .mainContainer {
+        margin-top: -180px;
+    }
+}
